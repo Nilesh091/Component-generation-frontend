@@ -11,6 +11,7 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    port: PORT
+    port: PORT,
+    allowedHosts: ['all'] // ✅ Add your Render domain here
   }
 });
