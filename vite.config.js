@@ -1,17 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-const PORT = parseInt(process.env.PORT) || 5173;
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: PORT
+    port: parseInt(process.env.PORT) || 5173
   },
-  preview: {
-    host: '0.0.0.0',
-    port: PORT,
-    allowedHosts: ['component-generation-frontend.onrender.com'] // ✅ Add your Render domain here
+  build: {
+    outDir: 'dist' // Ensure this matches Vercel's expected output
   }
 });
