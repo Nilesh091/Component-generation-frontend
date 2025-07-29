@@ -12,6 +12,6 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: PORT,
-    allowedHosts: ['all'] // ✅ Add your Render domain here
+    allowedHosts: ['component-generation-frontend.onrender.com'] // ✅ Add your Render domain here
   }
 });
